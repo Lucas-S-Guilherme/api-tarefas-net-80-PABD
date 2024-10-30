@@ -10,3 +10,4 @@ Criar o recurso categoria (id, nome) - O mesmo que já existe para Tarefa, criar
     - DAO
     - tabela banco
     - tudo funcionando!
+    teste
