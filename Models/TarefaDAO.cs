@@ -85,7 +85,7 @@ namespace ApiTarefasNet80.Models
                 // Tarefa _tarefa = new();
 
                 var query = _conn.Query();
-                query.CommandText = "SELECT * FROM tarefas WHERE id = @_id";
+                query.CommandText = "SELECT * FROM tarefas WHERE id_tar = @_id";
 
                 query.Parameters.AddWithValue("@_id", id);
 

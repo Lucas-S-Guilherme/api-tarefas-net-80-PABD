@@ -8,11 +8,11 @@ namespace ApiTarefasNet80.Database
 
         private static readonly string host = "localhost";
 
-        private static readonly string port = "3308";
+        private static readonly string port = "3306";
 
         private static readonly string user = "root";
 
-        private static readonly string password = "root";
+        private static readonly string password = "Note490!@";
 
         private static readonly string dbname = "tarefas_db";
 

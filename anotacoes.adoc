@@ -1,0 +1,12 @@
+=== Anotações aula
+
+Criar a propriedade feito
+
+Criar Rota [get]/tarefas{id}/finalizar e a ação de finalizar deverá marcar a tarefa com feito=true e adicionar a marca de tempo na propriedade Data realizada
+
+Criar o recurso categoria (id, nome) - O mesmo que já existe para Tarefa, criar as 5 funcões.
+    - controller
+    - model
+    - DAO
+    - tabela banco
+    - tudo funcionando!
