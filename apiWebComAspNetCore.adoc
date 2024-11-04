@@ -1,0 +1,20 @@
+== Tutorial da Microsoft sobre API
+
+https://learn.microsoft.com/pt-br/aspnet/core/web-api/?view=aspnetcore-8.0
+
+O namespace Microsoft.AspNetCore.Mvc fornece atributos que podem ser usados para configurar o comportamento de controladores de API Web e dos métodos de ação
+
+Veja uma lista que inclui os atributos disponíveis no namespace Microsoft.AspNetCore.Mvc. https://learn.microsoft.com/pt-br/dotnet/api/microsoft.aspnetcore.mvc?view=aspnetcore-8.0
+
+Atributo ApiController
+
+O atributo [ApiController] pode ser aplicado a uma classe de controlador para permitir os seguintes comportamentos opinativos específicos da API:
+
+    Requisito de roteamento de atributo
+    Respostas HTTP 400 automáticas
+    Inferência de parâmetro de origem da associação
+    Inferência de solicitação de várias partes/dados de formulário
+    Detalhes do problema dos códigos de status de erro
+
+https://learn.microsoft.com/pt-br/aspnet/core/tutorials/first-web-api?view=aspnetcore-8.0&tabs=visual-studio
+

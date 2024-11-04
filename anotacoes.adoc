@@ -1,5 +1,27 @@
 === Anotações aula
 
+Metodos http
+
+Relembrar o que cada um abaixo pode fazer:
+
+-GET
+-POST
+-PUT
+-DELETE
+-PATCH
+-OPTIONS
+-HEAD
+
+Adicionar Biblioteca MySql.Data 9.1.0
+
+DAO = Data Acess Object // acesso ao banco
+
+rota é igual a endpoint
+
+mesma rota pode ser utilizada por métodos http diferentes
+
+== Para Casa
+
 Criar a propriedade feito
 
 Criar Rota [get]/tarefas{id}/finalizar e a ação de finalizar deverá marcar a tarefa com feito=true e adicionar a marca de tempo na propriedade Data realizada

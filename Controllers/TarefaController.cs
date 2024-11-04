@@ -1,19 +1,23 @@
 ﻿using ApiTarefasNet80.DTOs;
 using ApiTarefasNet80.Models;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc; // O namespace Microsoft.AspNetCore.Mvc fornece atributos que podem ser usados para configurar o comportamento de controladores de API Web e dos métodos de ação
+
+// Veja uma lista que inclui os atributos disponíveis no namespace Microsoft.AspNetCore.Mvc. https://learn.microsoft.com/pt-br/dotnet/api/microsoft.aspnetcore.mvc?view=aspnetcore-8.0
 
 namespace ApiTarefasNet80.Controllers
 {
-    [Route("tarefas")]
+    [Route("tarefas")] //define a rota base da API
     [ApiController]
-    public class TarefaController : Controller
+    public class TarefaController : Controller // Cria a classe pública e herda da classe Controller (do namespace MCV), tornando-a um controlador MVC e habilitando métodos de respostas a requisições HTTP
     {
-        [HttpGet]
-        public IActionResult Get()
+        [HttpGet] // Identifica uma ação que dá suporte ao verbo de ação HTTP GET.
+        public IActionResult Get() //IActionResult - Interface? Define um contrato que representa o resultado de um método de ação.
+        // Método público que retorna um IActionResult, usado para responder com diferentes tipos de resposta HTTP (por exemplo, Ok, NotFound, Problem).
+
         {
             try
             {
-                List<Tarefa> listaTarefas = new TarefaDAO().List();
+                List<Tarefa> listaTarefas = new TarefaDAO().List(); // cria uma lista do tipo Tarefa, criando uma nova lista da Classe TarefaDAO, acessando seu método List()
 
                 return Ok(listaTarefas);
             }

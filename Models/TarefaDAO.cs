@@ -1,36 +1,36 @@
-﻿using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient; // importa o pacote de acesso ao MySql, pacote instalado com dotnet add package NomeDoPacote
 using ApiTarefasNet80.Database;
 
 namespace ApiTarefasNet80.Models
 {
     public class TarefaDAO
     {
-        private static ConnectionMysql _conn;
+        private static ConnectionMysql _conn; //cria o atributo privado de conexão ao banco de dados do tipo ConnectionMysql
 
-        public TarefaDAO()
+        public TarefaDAO() // construtor
         {
-            _conn = new ConnectionMysql();
+            _conn = new ConnectionMysql(); // inicializa a conexão ao instânciar ConnectionMysql()
         }
 
-        public int Insert(Tarefa item)
+        public int Insert(Tarefa item) //método Insert recebe um parâmetro item do tipo Tarefa
         {
             try
             {
-                var query = _conn.Query();
-                query.CommandText = "INSERT INTO tarefas (descricao_tar, data_tar) VALUES (@descricao, @data)";
+                var query = _conn.Query(); // método de ConnectionMysql, retorna um Objeto MySqlCommand
+                query.CommandText = "INSERT INTO tarefas (descricao_tar, data_tar) VALUES (@descricao, @data)"; // @placeholders para os valores fornecidos abaixo
 
                 query.Parameters.AddWithValue("@descricao", item.Descricao);
                 query.Parameters.AddWithValue("@data", item.Data.ToString("yyyy-MM-dd HH:mm:ss")); //"10/11/1990" -> "1990-11-10"
 
 
-                var result = query.ExecuteNonQuery();
+                var result = query.ExecuteNonQuery(); //retorno o número de linhas afetadas
 
                 if (result == 0)
                 {
                     throw new Exception("O registro não foi inserido. Verifique e tente novamente");
                 }
 
-                return (int)query.LastInsertedId;
+                return (int)query.LastInsertedId; // retorno o ultimo ID inserido
             }
             catch (Exception)
             {
@@ -38,7 +38,7 @@ namespace ApiTarefasNet80.Models
             }
             finally
             {
-                _conn.Close();
+                _conn.Close(); //fecha aconexão com o banco de dados
             }
         }
 
