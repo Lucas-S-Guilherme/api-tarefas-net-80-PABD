@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc; // O namespace Microsoft.AspNetCore.Mvc fornece 
 namespace ApiTarefasNet80.Controllers
 {
     [Route("tarefas")] //define a rota base da API
-    [ApiController]
+    [ApiController] //atributo do namespace .Mvc
     public class TarefaController : Controller // Cria a classe pública e herda da classe Controller (do namespace MCV), tornando-a um controlador MVC e habilitando métodos de respostas a requisições HTTP
     {
         [HttpGet] // Identifica uma ação que dá suporte ao verbo de ação HTTP GET.
@@ -17,7 +17,7 @@ namespace ApiTarefasNet80.Controllers
         {
             try
             {
-                List<Tarefa> listaTarefas = new TarefaDAO().List(); // cria uma lista do tipo Tarefa, criando uma nova lista da Classe TarefaDAO, acessando seu método List()
+                List<Categoria> listaTarefas = new TarefaDAO().List(); // cria uma lista do tipo Tarefa, de nome listaTarefas, atribuí um novo objeto com base na classe TarefaDAO, acessando seu método List()
 
                 return Ok(listaTarefas);
             }
@@ -50,7 +50,7 @@ namespace ApiTarefasNet80.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] TarefaDTO item)
         {
-            var tarefa = new Tarefa();
+            var tarefa = new Categoria();
 
             tarefa.Descricao = item.Descricao;
             tarefa.Feito = item.Feito;

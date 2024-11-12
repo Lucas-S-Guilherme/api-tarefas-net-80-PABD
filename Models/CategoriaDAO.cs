@@ -3,11 +3,11 @@ using ApiTarefasNet80.Database; // namescape de configuração do acesso ao BD
 
 namespace ApiTarefasNet80.Models
 {
-    public class TarefaDAO
+    public class CategoriaDAO
     {
         private static ConnectionMysql _conn; //cria o atributo privado de conexão ao banco de dados do tipo ConnectionMysql
 
-        public TarefaDAO() // construtor
+        public CategoriaDAO() // construtor
         {
             _conn = new ConnectionMysql(); // inicializa a conexão ao instânciar ConnectionMysql()
         }

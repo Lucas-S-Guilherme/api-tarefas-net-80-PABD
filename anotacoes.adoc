@@ -33,3 +33,7 @@ Criar o recurso categoria (id, nome) - O mesmo que já existe para Tarefa, criar
     - tabela banco
     - tudo funcionando!
     teste
+
+
+=== Ainda fazendo os arquivos de Categoria
+
