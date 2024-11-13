@@ -17,7 +17,7 @@ namespace ApiTarefasNet80.Controllers
         {
             try
             {
-                List<Categoria> listaTarefas = new TarefaDAO().List(); // cria uma lista do tipo Tarefa, de nome listaTarefas, atribuí um novo objeto com base na classe TarefaDAO, acessando seu método List()
+                List<Tarefa> listaTarefas = new TarefaDAO().List(); // cria uma lista do tipo Tarefa, de nome listaTarefas, atribuí um novo objeto com base na classe TarefaDAO, acessando seu método List()
 
                 return Ok(listaTarefas);
             }
@@ -50,7 +50,7 @@ namespace ApiTarefasNet80.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] TarefaDTO item)
         {
-            var tarefa = new Categoria();
+            var tarefa = new Tarefa();
 
             tarefa.Descricao = item.Descricao;
             tarefa.Feito = item.Feito;

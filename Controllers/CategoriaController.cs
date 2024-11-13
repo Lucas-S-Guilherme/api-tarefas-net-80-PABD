@@ -13,7 +13,7 @@ namespace ApiTarefasNet80.ControllersCategoria {
         public IActionResult Get()
 
         {
-            try List<Categoria> categorias = new CategoriaDAO().List();
+            try List<Tarefa> categorias = new CategoriaDAO().List();
         }
     }
 }

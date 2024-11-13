@@ -12,7 +12,7 @@ namespace ApiTarefasNet80.Database
 
         private static readonly string user = "root";
 
-        private static readonly string password = "Note490!@";
+        private static readonly string password = "Banco1234!";
 
         private static readonly string dbname = "tarefas_db";
 

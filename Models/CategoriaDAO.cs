@@ -12,7 +12,7 @@ namespace ApiTarefasNet80.Models
             _conn = new ConnectionMysql(); // inicializa a conexão ao instânciar ConnectionMysql()
         }
 
-        public int Insert(Categoria item) //método Insert recebe um parâmetro item do tipo Tarefa
+        public int Insert(Tarefa item) //método Insert recebe um parâmetro item do tipo Tarefa
         {
             try
             {
@@ -42,11 +42,11 @@ namespace ApiTarefasNet80.Models
             }
         }
 
-        public List<Categoria> List()
+        public List<Tarefa> List()
         {
             try
             {
-                List<Categoria> list = new List<Categoria>();
+                List<Tarefa> list = new List<Tarefa>();
                 // List<Tarefa> list = [];
 
                 var query = _conn.Query();
@@ -56,7 +56,7 @@ namespace ApiTarefasNet80.Models
 
                 while (reader.Read())
                 {
-                    list.Add(new Categoria()
+                    list.Add(new Tarefa()
                     {
                         Id = reader.GetInt32("id_tar"),
                         Descricao = reader.GetString("descricao_tar"),
@@ -77,11 +77,11 @@ namespace ApiTarefasNet80.Models
             }
         }
 
-        public Categoria? GetById(int id)
+        public Tarefa? GetById(int id)
         {
             try
             {
-                Categoria _tarefa = new Categoria();
+                Tarefa _tarefa = new Tarefa();
                 // Tarefa _tarefa = new();
 
                 var query = _conn.Query();
@@ -111,7 +111,7 @@ namespace ApiTarefasNet80.Models
             }
         }
 
-        public void Update(Categoria item)
+        public void Update(Tarefa item)
         {
             try
             {

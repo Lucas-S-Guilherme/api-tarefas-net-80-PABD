@@ -1,6 +1,6 @@
 ﻿namespace ApiTarefasNet80.Models
 {
-    public class Categoria
+    public class Tarefa
     {
         public int Id { get; set; }
 
